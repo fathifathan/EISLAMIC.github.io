@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+  }
+  
+  .banner-content {
+    height: 44rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-group {
+      width: 20rem;
+  }
+
+  .btn-outline{
+    color: black;
+    border-color: #41444B; 
+  }
+  .btn-outline:hover{
+    color: white;
+    background-color: #41444B;
+  }

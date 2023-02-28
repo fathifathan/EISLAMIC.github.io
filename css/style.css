@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  transition: all 0.5s;
+  }
+  
+  .navbar-scrolled {
+  background-color: #2b2b2b;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner-content {
+  height: 58rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* animation text here / */
+.animation {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 1px;
+  display: inline-block;
+  animation: fadeIn 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.txtCenter {
+  display: inline-block;
+  animation: text-center 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 1;
+  position: relative;
+  font-weight: 500;
+  font-family: montBold;
+}
+
+/* / TEXT RIGHT / */
+.slideRight {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.txtRight {
+  font-weight: 100;
+  font-family: montReg;
+  z-index: -1;
+  display: inline-block;
+  animation: text-right 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* / KEY FRAME / */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes text-center {
+  0% {
+    transform: translatex(50%);
+  }
+
+  60% {
+    transform: translatex(50%);
+  }
+
+  100% {
+    transform: translatex(0%);
+  }
+}
+
+@keyframes text-right {
+  0% {
+    opacity: 0;
+    transform: translatex(-100%);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translatex(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0%);
+  }
+}
+
+@font-face {
+  font-family: montBold;
+  src: url(font/Montserrat-Bold.otf);
+}
+
+@font-face {
+  font-family: montReg;
+  src: url(font/Montserrat-Regular.otf);
+}
+
+@font-face {
+  font-family: montLight;
+  src: url(font/Montserrat-Light.otf);
+}
+
+/* / animation text end */
+
+
+#about {
+  background-color: antiquewhite;
+  border-radius: 30px;
+  width: 70rem;
+  height: 23rem;
+  margin-top: 11rem;
+}
+
+.mid {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: bottom;
+  margin-top: 10rem;
+  height: 35rem;
+}
+
+/* card qcb */
+
+
+/* start footer */
+.mb-4 a:hover {
+  background-color: #4b4037;
+  transform: scale(1.1, 1.1)
+}
+
+/* end footer */

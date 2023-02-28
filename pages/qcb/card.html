@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eislamic | QCB</title>
+    <link rel="stylesheet" href="/css/card.css" />
+</head>
+
+<body>
+    <div class="container" id="tempat">
+    </div>
+</body>
+
+<script>
+
+    const stringToHTML = function (str) {
+        const dom = document.createElement('div');
+        dom.setAttribute('class', 'card')
+        dom.innerHTML = str;
+        return dom;
+    };
+
+    function createCard(keyword, ayat, no) {
+        const kartu = stringToHTML(`<div class="box"><div class="content"><h2>${no}</h2><h3>${ayat}</h3><p>${keyword}</p></div></div>`)
+        return kartu
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('key');
+
+    fetch('./database.json')
+        .then((response) => response.json())
+        .then((json) => {
+
+            let no = 1;
+            for (const key in json) {
+                if (Object.hasOwnProperty.call(json, key)) {
+                    const el = json[key];
+
+                    console.log(key, myParam)
+                    if (key === myParam) {
+                        for (const i in el) {
+                            if (Object.hasOwnProperty.call(el, i)) {
+                                const element = el[i];
+
+                                const kartu = createCard(element.keyword, element.ayat, no++)
+                                const tempat = document.querySelector('#tempat')
+                                tempat.appendChild(kartu.cloneNode(true))
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+        });
+</script>
+
+</html>

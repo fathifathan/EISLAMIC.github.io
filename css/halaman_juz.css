@@ -1,0 +1,14 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .tombol {
+    background-color: #dda15e;
+    color: white;
+  }
+  
+  .tombol:hover {
+    background-color: #dda15e;
+    color: white;
+  }
+  
