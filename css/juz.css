@@ -7,8 +7,10 @@
 body {
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
-    justify-content: center;
-    align-items: center;
+}
+
+.nav-item {
+    text-align: center;
 }
 
 .bd-placeholder-img {
@@ -17,6 +19,13 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        width: 24.2rem;
+        overflow-x: hidden;
+    }
 }
 
 @media (min-width: 768px) {
@@ -51,7 +60,7 @@ body {
     overflow-y: hidden;
 }
 
-.nav-scroller .nav {
+.nav-scroller {
     display: flex;
     flex-wrap: nowrap;
     padding-bottom: 1rem;
